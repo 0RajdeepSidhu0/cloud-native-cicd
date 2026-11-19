@@ -1,0 +1,13 @@
+name: My First Ci pipline
+
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Environment
+        run: echo "My first GitHub Actions pipeline is running!" 

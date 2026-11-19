@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Cloud-Native CI/CD Pipeline project demonstrating automated software delivery using GitHub Actions, Docker and AWS EC2.">
+
+    <title>Cloud-Native CI/CD | DevOps Project</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                Cloud<span>Deploy</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                    aria-controls="navLinks">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#technologies">Technologies</a></li>
+                <li><a href="#milestones">Milestones</a></li>
+            </ul>
+
+            <a href="#deployment" class="nav-button">Deployment Status</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero container" id="home">
+
+            <div class="hero-content">
+                <div class="eyebrow">
+                    <span class="status-dot"></span>
+                    DEVOPS ENGINEERING PROJECT
+                </div>
+
+                <h1>
+                    Building Reliable
+                    <span>Cloud-Native</span>
+                    Deployments.
+                </h1>
+
+                <p>
+                    A hands-on implementation of an automated CI/CD
+                    pipeline using GitHub Actions, Docker and AWS EC2.
+                    From source code to production deployment.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#architecture" class="btn btn-primary">
+                        Explore Architecture →
+                    </a>
+
+                    <a href="#technologies" class="btn btn-outline">
+                        Explore Tech Stack
+                    </a>
+                </div>
+
+                <div class="hero-meta">
+                    <div>
+                        <strong>01</strong>
+                        <span>Project</span>
+                    </div>
+                    <div>
+                        <strong>08</strong>
+                        <span>Development Phases</span>
+                    </div>
+                    <div>
+                        <strong>100%</strong>
+                        <span>Hands-on Learning</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span>deployment.sh</span>
+                    </div>
+
+                    <div class="terminal-body">
+                        <p><span class="terminal-green">$</span> git push origin main</p>
+                        <p class="terminal-muted">Triggering CI/CD workflow...</p>
+
+                        <p><span class="terminal-green">✓</span> Source checkout</p>
+                        <p><span class="terminal-green">✓</span> Build application</p>
+                        <p><span class="terminal-green">✓</span> Docker image</p>
+                        <p><span class="terminal-green">✓</span> Push to registry</p>
+
+                        <p class="terminal-muted">
+                            Deployment automation will be implemented
+                            in upcoming phases.
+                        </p>
+
+                        <p>
+                            <span class="terminal-green">$</span>
+                            <span class="cursor">_</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Architecture Section -->
+        <section class="section architecture-section" id="architecture">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">SYSTEM DESIGN</span>
+                    <h2>CI/CD Pipeline Architecture</h2>
+                    <p>
+                        Understanding the journey of application code
+                        from development to cloud deployment.
+                    </p>
+                </div>
+
+                <div class="pipeline">
+
+                    <div class="pipeline-step">
+                        <div class="pipeline-icon">⌘</div>
+                        <h3>Git</h3>
+                        <p>Source Control</p>
+                    </div>
+
+                    <div class="pipeline-arrow">→</div>
+
+                    <div class="pipeline-step">
+                        <div class="pipeline-icon">⚙</div>
+                        <h3>GitHub Actions</h3>
+                        <p>CI/CD Automation</p>
+                    </div>
+
+                    <div class="pipeline-arrow">→</div>
+
+                    <div class="pipeline-step">
+                        <div class="pipeline-icon">▣</div>
+                        <h3>Docker</h3>
+                        <p>Containerization</p>
+                    </div>
+
+                    <div class="pipeline-arrow">→</div>
+
+                    <div class="pipeline-step">
+                        <div class="pipeline-icon">📦</div>
+                        <h3>Docker Hub</h3>
+                        <p>Image Registry</p>
+                    </div>
+
+                    <div class="pipeline-arrow">→</div>
+
+                    <div class="pipeline-step">
+                        <div class="pipeline-icon">☁</div>
+                        <h3>AWS EC2</h3>
+                        <p>Cloud Deployment</p>
+                    </div>
+
+                </div>
+
+                <div class="architecture-note">
+                    <span>ⓘ</span>
+                    <p>
+                        This represents the planned architecture.
+                        Individual pipeline stages will be implemented
+                        and verified throughout the project.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Technology Stack -->
+        <section class="section container" id="technologies">
+
+            <div class="section-heading">
+                <span class="section-label">TECHNOLOGY STACK</span>
+                <h2>Tools Behind the Pipeline</h2>
+                <p>
+                    Technologies selected to build, automate,
+                    package and deploy the application.
+                </p>
+            </div>
+
+            <div class="tech-grid">
+
+                <article class="tech-card">
+                    <div class="tech-icon">⌘</div>
+                    <h3>Git</h3>
+                    <p>Version control and source code management.</p>
+                    <span class="tech-category">Version Control</span>
+                </article>
+
+                <article class="tech-card">
+                    <div class="tech-icon">⚙</div>
+                    <h3>GitHub Actions</h3>
+                    <p>Automated build and deployment workflows.</p>
+                    <span class="tech-category">CI/CD</span>
+                </article>
+
+                <article class="tech-card">
+                    <div class="tech-icon">▣</div>
+                    <h3>Docker</h3>
+                    <p>Containerization and application packaging.</p>
+                    <span class="tech-category">Containers</span>
+                </article>
+
+                <article class="tech-card">
+                    <div class="tech-icon">📦</div>
+                    <h3>Docker Hub</h3>
+                    <p>Container image storage and distribution.</p>
+                    <span class="tech-category">Registry</span>
+                </article>
+
+                <article class="tech-card">
+                    <div class="tech-icon">☁</div>
+                    <h3>AWS EC2</h3>
+                    <p>Cloud compute infrastructure.</p>
+                    <span class="tech-category">Cloud</span>
+                </article>
+
+                <article class="tech-card">
+                    <div class="tech-icon">🐧</div>
+                    <h3>Linux</h3>
+                    <p>Server administration and shell operations.</p>
+                    <span class="tech-category">Operating System</span>
+                </article>
+
+                <article class="tech-card">
+                    <div class="tech-icon">$_</div>
+                    <h3>Bash</h3>
+                    <p>Shell scripting and deployment automation.</p>
+                    <span class="tech-category">Automation</span>
+                </article>
+
+                <article class="tech-card">
+                    <div class="tech-icon">🌐</div>
+                    <h3>Nginx</h3>
+                    <p>Static website hosting and HTTP serving.</p>
+                    <span class="tech-category">Web Server</span>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Deployment Status -->
+        <section class="section deployment-section" id="deployment">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">INFRASTRUCTURE</span>
+                    <h2>Deployment Overview</h2>
+                    <p>
+                        Deployment information will be updated as
+                        infrastructure implementation progresses.
+                    </p>
+                </div>
+
+                <div class="deployment-card">
+
+                    <div class="deployment-header">
+                        <div>
+                            <span class="deployment-label">
+                                CURRENT PROJECT STATUS
+                            </span>
+                            <h3>Application Development</h3>
+                        </div>
+
+                        <span class="status-badge">
+                            <span class="status-dot"></span>
+                            In Progress
+                        </span>
+                    </div>
+
+                    <div class="deployment-grid">
+
+                        <div>
+                            <span>Application</span>
+                            <strong>Static Website</strong>
+                        </div>
+
+                        <div>
+                            <span>Containerization</span>
+                            <strong>Not Started</strong>
+                        </div>
+
+                        <div>
+                            <span>CI/CD Pipeline</span>
+                            <strong>Not Started</strong>
+                        </div>
+
+                        <div>
+                            <span>Cloud Deployment</span>
+                            <strong>Not Started</strong>
+                        </div>
+
+                    </div>
+
+                    <p class="deployment-disclaimer">
+                        These are manually maintained project milestones,
+                        not live infrastructure health checks.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Milestones -->
+        <section class="section container" id="milestones">
+
+            <div class="section-heading">
+                <span class="section-label">PROJECT ROADMAP</span>
+                <h2>Development Milestones</h2>
+                <p>
+                    Tracking the engineering journey from application
+                    development to automated deployment.
+                </p>
+            </div>
+
+            <div class="milestone-list">
+
+                <div class="milestone">
+                    <div class="milestone-number">01</div>
+                    <div>
+                        <h3>Application Development</h3>
+                        <p>Build a responsive static website.</p>
+                    </div>
+                    <span class="milestone-status active">In Progress</span>
+                </div>
+
+                <div class="milestone">
+                    <div class="milestone-number">02</div>
+                    <div>
+                        <h3>Git & GitHub</h3>
+                        <p>Version control and repository management.</p>
+                    </div>
+                    <span class="milestone-status">Pending</span>
+                </div>
+
+                <div class="milestone">
+                    <div class="milestone-number">03</div>
+                    <div>
+                        <h3>Docker & Containerization</h3>
+                        <p>Build and run the Nginx container.</p>
+                    </div>
+                    <span class="milestone-status">Pending</span>
+                </div>
+
+                <div class="milestone">
+                    <div class="milestone-number">04</div>
+                    <div>
+                        <h3>Docker Hub</h3>
+                        <p>Publish container images.</p>
+                    </div>
+                    <span class="milestone-status">Pending</span>
+                </div>
+
+                <div class="milestone">
+                    <div class="milestone-number">05</div>
+                    <div>
+                        <h3>GitHub Actions CI/CD</h3>
+                        <p>Automate image builds and publishing.</p>
+                    </div>
+                    <span class="milestone-status">Pending</span>
+                </div>
+
+                <div class="milestone">
+                    <div class="milestone-number">06</div>
+                    <div>
+                        <h3>AWS EC2 Deployment</h3>
+                        <p>Deploy the application to a Linux server.</p>
+                    </div>
+                    <span class="milestone-status">Pending</span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <a href="#home" class="logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                Cloud<span>Deploy</span>
+            </a>
+
+            <p>
+                Built to learn, automate and deploy.
+                Cloud-Native CI/CD Pipeline Project.
+            </p>
+
+            <a href="#home" class="back-to-top">Back to top ↑</a>
+
+        </div>
+
+        <div class="footer-bottom">
+            © <span id="currentYear"></span> Cloud-Native CI/CD Project.
+            Built with HTML, CSS and JavaScript.
+        </div>
+    </footer>
+
+</body>
+</html>

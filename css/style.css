@@ -1,0 +1,734 @@
+
+/* =====================================
+   1. Global Styles
+===================================== */
+
+:root {
+    --background: #080d18;
+    --surface: #101827;
+    --surface-light: #172337;
+    --primary: #38bdf8;
+    --primary-dark: #0284c7;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --border: #263449;
+    --success: #22c55e;
+
+    --container-width: 1150px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(90%, var(--container-width));
+    margin: auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+/* =====================================
+   2. Navigation
+===================================== */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(8, 13, 24, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 800;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.logo span:last-child {
+    color: var(--primary);
+}
+
+.logo-icon {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-button {
+    background: var(--primary);
+    color: #07111e;
+    padding: 11px 17px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    color: var(--text);
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* =====================================
+   3. Hero Section
+===================================== */
+
+.hero {
+    min-height: 620px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 65px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary);
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--success);
+    display: inline-block;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero-content > p {
+    color: var(--muted);
+    max-width: 530px;
+    font-size: 16px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 13px 19px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #07111e;
+}
+
+.btn-primary:hover {
+    background: #7dd3fc;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    border: 1px solid var(--border);
+}
+
+.btn-outline:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.hero-meta {
+    display: flex;
+    gap: 45px;
+    margin-top: 60px;
+}
+
+.hero-meta div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-meta strong {
+    font-size: 22px;
+}
+
+.hero-meta span {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* =====================================
+   4. Terminal Window
+===================================== */
+
+.terminal-window {
+    background: #0c1422;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+.terminal-header {
+    background: #182338;
+    padding: 15px 18px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 7px;
+}
+
+.terminal-dots span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #64748b;
+}
+
+.terminal-dots span:first-child {
+    background: #f87171;
+}
+
+.terminal-dots span:nth-child(2) {
+    background: #facc15;
+}
+
+.terminal-dots span:last-child {
+    background: #4ade80;
+}
+
+.terminal-body {
+    padding: 28px 22px;
+    font-family: monospace;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.terminal-body p {
+    margin-bottom: 15px;
+}
+
+.terminal-green {
+    color: var(--success);
+}
+
+.terminal-muted {
+    color: var(--muted);
+}
+
+.cursor {
+    color: var(--primary);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* =====================================
+   5. Section Headings
+===================================== */
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 55px;
+}
+
+.section-label {
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: clamp(28px, 4vw, 39px);
+    margin: 12px 0;
+    letter-spacing: -1px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =====================================
+   6. Architecture
+===================================== */
+
+.architecture-section {
+    background: #0d1523;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.pipeline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.pipeline-step {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px 14px;
+    min-width: 140px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.pipeline-step:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.pipeline-icon {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.pipeline-step h3 {
+    font-size: 13px;
+}
+
+.pipeline-step p {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 5px;
+}
+
+.pipeline-arrow {
+    color: var(--primary);
+    font-size: 22px;
+}
+
+.architecture-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 35px;
+    padding: 17px;
+    background: rgba(56, 189, 248, 0.06);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    border-radius: 8px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.architecture-note span {
+    color: var(--primary);
+}
+
+/* =====================================
+   7. Technology Stack
+===================================== */
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.tech-card {
+    padding: 25px 22px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.tech-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.tech-icon {
+    font-size: 27px;
+    color: var(--primary);
+    margin-bottom: 17px;
+}
+
+.tech-card h3 {
+    font-size: 16px;
+    margin-bottom: 9px;
+}
+
+.tech-card p {
+    color: var(--muted);
+    font-size: 12px;
+    min-height: 40px;
+}
+
+.tech-category {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 5px 9px;
+    border-radius: 5px;
+    background: #172c42;
+    color: var(--primary);
+    font-size: 10px;
+}
+
+/* =====================================
+   8. Deployment
+===================================== */
+
+.deployment-section {
+    background: #0d1523;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.deployment-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 30px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.deployment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.deployment-label {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.deployment-header h3 {
+    margin-top: 7px;
+    font-size: 21px;
+}
+
+.status-badge {
+    color: #86efac;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.25);
+    border-radius: 30px;
+    padding: 8px 13px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.status-badge .status-dot {
+    margin-right: 7px;
+}
+
+.deployment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.deployment-grid div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.deployment-grid span {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.deployment-grid strong {
+    font-size: 14px;
+}
+
+.deployment-disclaimer {
+    color: var(--muted);
+    font-size: 11px;
+    border-top: 1px solid var(--border);
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+/* =====================================
+   9. Milestones
+===================================== */
+
+.milestone-list {
+    max-width: 850px;
+    margin: auto;
+}
+
+.milestone {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 22px 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.milestone-number {
+    min-width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    background: var(--surface-light);
+    border-radius: 8px;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.milestone h3 {
+    font-size: 15px;
+}
+
+.milestone p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.milestone-status {
+    margin-left: auto;
+    color: var(--muted);
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.milestone-status.active {
+    color: var(--primary);
+}
+
+/* =====================================
+   10. Footer
+===================================== */
+
+.footer {
+    background: #060b13;
+    border-top: 1px solid var(--border);
+}
+
+.footer-content {
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-content p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.back-to-top {
+    color: var(--primary);
+    font-size: 12px;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 20px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* =====================================
+   11. Responsive Design
+===================================== */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .hero-visual {
+        max-width: 600px;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pipeline {
+        gap: 12px;
+    }
+
+    .pipeline-step {
+        min-width: 125px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 85px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .hero-meta {
+        gap: 22px;
+    }
+
+    .hero-meta strong {
+        font-size: 18px;
+    }
+
+    .pipeline {
+        flex-direction: column;
+    }
+
+    .pipeline-step {
+        width: 100%;
+    }
+
+    .pipeline-arrow {
+        transform: rotate(90deg);
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .deployment-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .deployment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .milestone {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .milestone-status {
+        width: 100%;
+        margin-left: 54px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 30px 0;
+    }
+}

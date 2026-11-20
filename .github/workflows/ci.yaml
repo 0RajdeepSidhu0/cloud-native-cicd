@@ -14,12 +14,9 @@ jobs:
       ENVIRONMENT: testing
     runs-on: ubuntu-latest
     steps:
-      - name: System Information
+      - name: Display Github Information
         run:  |
           echo "Display Configuration"
-          echo "Application: $APP_NAME"
-          echo "Version ${{env.APP_VERSION}}"
-          echo "Environment: ${{env.ENVIRONMENT}}"
-          pwd
-          python3 --version
-          ls -a
+          echo "Triggered by; ${{github.actor}}"
+          echo "Repository: ${{github.repository}}"
+          echo "Environment: ${{github.ref_name}}"

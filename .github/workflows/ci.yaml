@@ -4,14 +4,22 @@ on:
   push:
     branches: 
       - main
+env:
+  APP_NAME: cloud-native-cicd
+  APP_VERSION: v1.0
 
 jobs:
   test:
+    env:
+      ENVIRONMENT: testing
     runs-on: ubuntu-latest
     steps:
       - name: System Information
         run:  |
-          echo "Starting system inspection" 
+          echo "Display Configuration"
+          echo "Application: $APP_NAME"
+          echo "Version ${{env.APP_VERSION}}"
+          echo "Environment: ${{env.ENVIRONMENT}}"
           pwd
           python3 --version
           ls -a

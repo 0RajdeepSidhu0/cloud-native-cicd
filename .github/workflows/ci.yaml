@@ -14,9 +14,9 @@ jobs:
       ENVIRONMENT: testing
     runs-on: ubuntu-latest
     steps:
-      - name: Display Github Information
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: List Repository Files
         run:  |
-          echo "Display Configuration"
-          echo "Triggered by; ${{github.actor}}"
-          echo "Repository: ${{github.repository}}"
-          echo "Environment: ${{github.ref_name}}"
+          pwd
+          ls -la

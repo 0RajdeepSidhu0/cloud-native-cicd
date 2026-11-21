@@ -9,7 +9,23 @@ env:
   APP_VERSION: v1.0
 
 jobs:
+  build:
+    name: Building os
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display Build Information
+        run: |
+          echo "Starting application build"
+          echo "APP NAME: $APP_NAME"
+          echo "APP VERSION: $APP_VERSION"
+      - name: Display Runner Information
+        run: |
+          echo "RUNNER OS: $RUNNER_OS"
+          echo "RUNNER NAME: $RUNNER_NAME"
+
   test:
+    needs: build
     env:
       ENVIRONMENT: testing
     runs-on: ubuntu-latest

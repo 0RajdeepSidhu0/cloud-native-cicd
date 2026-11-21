@@ -17,6 +17,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
       - name: List Repository Files
+        run: |
+          pwd
+          ls -la
+      - name: Verifying if project Structure exists
         run:  |
           if [ -f index.html ] && [ -d css ] && [ -d js ]; then
             echo "Project structure verified successfully!"

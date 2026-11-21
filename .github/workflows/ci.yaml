@@ -18,5 +18,9 @@ jobs:
         uses: actions/checkout@v4
       - name: List Repository Files
         run:  |
-          pwd
-          ls -la
+          if [ -f index.html ] && [ -d css ] && [ -d js ]; then
+            echo "Project structure verified successfully!"
+          else
+            echo "Project structure verification failed!"
+            exit 1
+          fi
